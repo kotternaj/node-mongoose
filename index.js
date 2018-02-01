@@ -4,15 +4,13 @@ mongoose.Promise = require('bluebird');
 const Dishes = require('./models/dishes');
 
 const url = 'mongodb://localhost:27017/confusion';
-const connect = mongoose.connect(url, {
-    useMongoClient: true
-});
+const connect = mongoose.connect(url);
 
 connect.then((db)=> {
     console.log('Connected correctly to our server');
-
+    var db = mongoose.connection;
     var newDish = Dishes ({
-        name: 'Uthappizza',
+        name: 'Uthappizza2',
         description: 'test'
     });
 
