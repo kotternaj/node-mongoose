@@ -10,7 +10,7 @@ connect.then((db)=> {
     console.log('Connected correctly to our server');
     var db = mongoose.connection;
     var newDish = Dishes ({
-        name: 'Uthappizza2',
+        name: 'Uthappizza',
         description: 'test'
     });
 
